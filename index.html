@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Gestion Documental</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="vh-100">
+		
+		<div class="wrapper d-flex align-items-stretch vh-100">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+        </div>
+	  		<h1><a href="index.html" class="logo">Gestion Documental</a></h1>
+        <ul class="list-unstyled components mb-5">
+          <li class="active">
+            <a href="#" onclick="cambiarContenido('opcion1')"><span class="fa fa-home mr-3"></span>Inicio</a>
+          </li>
+          <li>
+            <a href="#" onclick="cambiarContenido('opcion2')"><span class="fa fa-search mr-3"></span>Busqueda</a>
+          </li>
+          <li>
+            <a href="#" onclick="cambiarContenido('opcion3')"><span class="fa fa-solid fa-image mr-3"></span>Imagenes</a>
+          </li>
+          <li>
+            <a href="#" onclick="cambiarContenido('opcion4')"><span class="fa fa-paper-plane mr-3"></span> Despacho</a>
+          </li>
+          <li>
+            <a href="#"><span class="	fa fa-times-circle-o mr-3"></span> Cerrar sesión</a>
+          </li>
+        </ul>
+
+    	</nav>
+
+      <main id="contenido" class="p-4 p-md-5 pt-5 container-fluid bg-light text-center">
+        <h2 class="mb-4">Bienvenido al Sistema de Búsqueda Documental</h2>
+        <p>Este sistema te permite realizar búsquedas en nuestro registro de documentos recibidos de manera rápida y eficiente. diseñado para simplificar y agilizar tus procesos de búsqueda de documentos. Ya sea que estés buscando información sobre un préstamo específico, una solicitud pendiente, o cualquier otra documentación relevante, nuestro sistema está aquí para ayudarte.</p>
+        <p>Búsqueda Eficiente: Nuestra plataforma te permite realizar búsquedas precisas y rápidas en nuestra base de datos de documentos. Con solo ingresar la información relevante en los campos de búsqueda y hacer clic en el botón "Buscar", obtendrás los resultados en cuestión de segundos.</p>
+        <p>Flexibilidad en los Criterios de Búsqueda: Puedes buscar documentos utilizando una variedad de criterios, como el número de préstamo, el número de solicitud, la identificación del cliente o la fecha de registro. Esto te permite encontrar la información que necesitas de manera rápida y precisa.</p>
+          <div class="text-center w-50 h-50 mx-auto">
+            <img src="Imagenes/buscarinf.jpg" class="img-fluid">
+          </div>
+      </main>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
