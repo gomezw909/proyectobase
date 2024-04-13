@@ -1,5 +1,5 @@
 export interface IDespacho {
-    Prestamo: string;
+    prestamo: string;
     solicitud: string;
     identificacion: string;
     despachado: boolean;

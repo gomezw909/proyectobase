@@ -3,23 +3,22 @@
 import { createClient } from "@/infrastructure/config/supabaseServer";
 import { IDocumentos } from "@/interfaces/IDocumentos";
 
-
-interface IGetAllDocumentUseCase {
+interface IGetDocumentByIdentificacionUseCase {
   error?: string | null;
   documentos?: IDocumentos[];
 }
 
-export const getAllDocumentUseCase = async (): Promise<IGetAllDocumentUseCase> => {
+export const getDocumentByIdentificacionUseCase = async ({ identificacion }: { identificacion: string }): Promise<IGetDocumentByIdentificacionUseCase> => {
   const supabase = createClient();
   supabase.auth.getUser();
 
-  let { data, error } = await supabase.from("documento").select("*");
+  let { data, error } = await supabase.from("documento").select("*").eq("identificacion", identificacion);
 
   switch (error) {
     case null: {
       return {
         documentos: data as IDocumentos[],
-        error: null
+        error: null,
       };
     }
 

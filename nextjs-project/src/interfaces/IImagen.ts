@@ -1,6 +1,6 @@
 export interface IImagen {
-    Prestamo: string;
-    Solicitud: string;
+    prestamo: string;
+    solicitud: string;
     identificacion: string;
     imagen: string; // Asume una URL a una imagen almacenada
   }

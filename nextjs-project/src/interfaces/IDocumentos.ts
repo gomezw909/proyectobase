@@ -12,4 +12,5 @@ export interface IDocumentos {
     usuario: string;
     fecha2: string;
     despachado: boolean;
+    imageUrl?: string
 }

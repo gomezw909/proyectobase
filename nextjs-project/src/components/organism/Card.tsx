@@ -1,14 +1,13 @@
+import { ImageUpload } from "@/app/documento/[identificacion]/components/imageUpload";
 import { CardInfo } from "@/components/atoms/CardInfo";
 import { IDocumentos } from "@/interfaces/IDocumentos";
-import Image from "next/image";
+
 
 export const Card = ({ documento }: { documento: IDocumentos }) => {
   return (
     <div className=" bg-gray-100 shadow-md rounded-lg p-6 flex gap-8">
       {/* IMAGEN */}
-      <div className="h-96 w-96 bg-gray-600 flex items-center justify-center hover:cursor-pointer">
-        <Image src="/svg/add-image.svg" alt={"No imagen disponible"} width={96} height={96} className="hover:scale-105 transition-all"/>
-      </div>
+      <ImageUpload documento={documento} />
 
       {/* INFO */}
       <div>

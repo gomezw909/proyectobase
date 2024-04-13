@@ -9,7 +9,7 @@ export default async function Home({
     prestamo?: string;
     solicitud?: string;
     identificacion?: string;
-    fecha_registro?: string;
+    fecha1?: string;
   };
 }) {
   

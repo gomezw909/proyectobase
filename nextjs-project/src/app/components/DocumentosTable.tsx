@@ -1,6 +1,6 @@
 import { Table } from "@/components/organism/Table";
 import { filterDocumentUseCase } from "@/modules/Documentos/usecases/filterDocumentUseCase";
-import { getAllDocumentUseCase } from "@/modules/Documentos/usecases/getAllDocumentUseCase";
+
 
 const heads = ["Identificacion", "Posicion", "Prestamo", "Solicitud", "Despachado", "Fecha1"];
 
@@ -11,11 +11,10 @@ export const DocumentosTable = async ({
     prestamo?: string;
     solicitud?: string;
     identificacion?: string;
-    fecha_registro?: string;
+    fecha1?: string;
   };
 }) => {
-  const data = await getAllDocumentUseCase();
-  const data2 = await filterDocumentUseCase();
+  const data = await filterDocumentUseCase({ searchParams: searchParams });
 
   if (data.error) {
     console.error(data.error);

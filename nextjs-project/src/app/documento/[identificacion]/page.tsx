@@ -1,7 +1,17 @@
+import { Despachar } from "@/app/documento/[identificacion]/components/despachar";
 import { Card } from "@/components/organism/Card";
 import { IDocumentos } from "@/interfaces/IDocumentos";
+import { getDocumentByIdentificacionUseCase } from "@/modules/Documentos/usecases/getDocumentByIdentificacionUseCase";
 
-export default function DocumentoPage({ params }: { params: { identificacion: string } }) {
+export default async function DocumentoPage({ params }: { params: { identificacion: string } }) {
+  const result = await getDocumentByIdentificacionUseCase({ identificacion: params.identificacion });
+
+  if (result.error) {
+    throw new Error(result.error);
+  }
+
+  const data = result.documentos![0];
+
   return (
     <>
       <header>
@@ -9,12 +19,10 @@ export default function DocumentoPage({ params }: { params: { identificacion: st
       </header>
 
       <section className="p-8">
-        <Card documento={documento} />
+        <Card documento={data} />
 
         <div className="flex justify-end mt-4">
-          <button type="submit" className="bg-blue-600 text-blue-300 font-bold p-2 rounded-md  w-36 h-12 btn hover:bg-blue-500 btn-outline transition-all hover:scale-105">
-            Despachar
-          </button>
+        <Despachar documento={documento} />
         </div>
       </section>
     </>
