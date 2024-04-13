@@ -2,7 +2,7 @@ import { Table } from "@/components/organism/Table";
 import { filterDocumentUseCase } from "@/modules/Documentos/usecases/filterDocumentUseCase";
 
 
-const heads = ["Identificacion", "Posicion", "Prestamo", "Solicitud", "Despachado", "Fecha1"];
+const heads = ["Identificacion", "Posicion", "Prestamo", "Solicitud", "Despachado", "Fecha1", "Usuario", "Caja1"];
 
 export const DocumentosTable = async ({
   searchParams,

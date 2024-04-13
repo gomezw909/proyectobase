@@ -4,7 +4,7 @@ import { InputLabel } from "@/components/molecules/InputLabel";
 
 export const FilterForm = () => {
   return (
-    <form className="flex flex-col space-y-4 p-8">
+    <form className="flex flex-col space-y-4 p-8 items-center">
       <div className="gap-8 items-end  md:flex ">
         <InputLabel label="# Prestamo" name="prestamo" placeholder="Escribe la categoría" type="text" />
         <InputLabel label="Solicitud" name="solicitud" placeholder="Escribe la categoría" type="text" />

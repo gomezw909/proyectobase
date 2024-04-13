@@ -22,25 +22,9 @@ export default async function DocumentoPage({ params }: { params: { identificaci
         <Card documento={data} />
 
         <div className="flex justify-end mt-4">
-        <Despachar documento={documento} />
+        <Despachar documento={data} />
         </div>
       </section>
     </>
   );
 }
-
-const documento: IDocumentos = {
-  posicion: 1,
-  prestamo: "Prestamo001",
-  solicitud: "Solicitud001",
-  identificacion: "ID001",
-  garantia1: "Garantia1-001",
-  garantia2: "Garantia2-001",
-  garantia3: "Garantia3-001",
-  caja1: "Caja1-001",
-  fecha1: "2024-01-01",
-  caja2: "Caja2-001",
-  usuario: "Usuario001",
-  fecha2: "2024-01-02",
-  despachado: false,
-};

@@ -29,6 +29,8 @@ export const Table = ({ heads = [], rows = [] }: TableProps) => {
               <td>{row.solicitud}</td>
               <td>{row.despachado ? "Si" : "No"}</td>
               <td>{row.fecha1}</td>
+              <td>{row.usuario}</td>
+              <td>{row.caja1}</td>
             </tr>
           ))}
         </tbody>
